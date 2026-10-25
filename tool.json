@@ -1,0 +1,59 @@
+{
+  "id": "E087",
+  "slug": "eng-rc-lowpass-gain",
+  "title": "RC 저역통과 진폭비 계산기",
+  "title_en": "RC Low Pass Magnitude Calculator",
+  "category": "전기",
+  "category_en": "Electrical engineering",
+  "fields": [
+    {
+      "key": "r",
+      "label": "저항 R",
+      "label_en": "Resistance R",
+      "dimension": "resistance",
+      "example": 1000,
+      "constraint": "positive",
+      "display_unit": "ohm",
+      "display_value": "1000"
+    },
+    {
+      "key": "c",
+      "label": "정전용량 C",
+      "label_en": "Capacitance C",
+      "dimension": "capacitance",
+      "example": 1e-07,
+      "constraint": "positive",
+      "display_unit": "uF",
+      "display_value": "0.1"
+    },
+    {
+      "key": "freq",
+      "label": "입력 주파수 f",
+      "label_en": "Input frequency f",
+      "dimension": "frequency",
+      "example": 1000,
+      "constraint": "nonnegative",
+      "display_unit": "Hz",
+      "display_value": "1000"
+    }
+  ],
+  "result_label": "전압 진폭비 |H|",
+  "result_label_en": "Voltage magnitude ratio |H|",
+  "result_dimension": "fraction",
+  "formula": "|H| = 1/√(1+(2πfRC)²)",
+  "purpose": "커패시터 양단 출력의 이상 RC 저역통과 진폭비 계산",
+  "purpose_en": "Calculate magnitude response of an unloaded RC low-pass filter.",
+  "assumptions": "R,C>0, f≥0. 이상 전원·직렬 R과 접지 C·커패시터 양단 무부하 출력을 가정한다. 위상·복소응답·실제 소자 기생성분은 제외한다.",
+  "assumptions_en": "Required: R,C>0, f≥0, an ideal source and unloaded output across the shunt capacitor. Phase, complex response and parasitic components are excluded.",
+  "sources": [
+    {
+      "label": "MIT OCW · Anant Agarwal and Jeffrey Lang · Lecture 18",
+      "url": "https://ocw.mit.edu/courses/6-002-circuits-and-electronics-spring-2007/d4e136975654a01f7fc2c9b49196d376_6002_l18.pdf"
+    }
+  ],
+  "condition": "",
+  "condition_en": "",
+  "site": "https://nanalab.kr/eng-rc-lowpass-gain/",
+  "repository": "https://github.com/NaNaCompany/eng-rc-lowpass-gain",
+  "output_unit": "1"
+}
